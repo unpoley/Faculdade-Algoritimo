@@ -29,6 +29,8 @@ def ad_aluno():
     media = sum(notas)/len(notas)
     aluno = {"nome": nome, "notas": notas, "media": media}
     alunos.append(aluno)
+    for a in alunos:
+        print(f"o aluno: {a["nome"]} foi adicionado")
 def ordenar_alunos():
     alunos.sort(key=lambda x: x["media"], reverse=True)
 def salvar_arquivo():
